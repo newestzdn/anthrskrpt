@@ -3,4 +3,14 @@
 for file in *.zip;
 do curl -T "$file" https://pixeldrain.com/api/file/; done >> anu1.txt
 
+function push() {
+LINKROM=$(echo *.txt)
+        curl -F document=@$LINKROM "https://api.telegram.org/bot$TOKEN_BOT_TELE/sendDocument" \
+        -F chat_id="$ID_CHAT" \
+        -F "disable_web_page_preview=true" \
+        -F "parse_mode=html" \
+        -F caption="Build Done!." 
+}
+
+push
 
