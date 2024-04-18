@@ -1,6 +1,6 @@
 #!bin/bash
 
-for file in crDroidAndroid-14.0-*.zip;
+for file in *.zip;
 do curl -s -T "$file" https://pixeldrain.com/api/file/; done >> anu1.txt
 
 function push() {
