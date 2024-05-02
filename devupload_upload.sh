@@ -10,7 +10,7 @@ LINKROM=$(echo *.txt)
         -F chat_id="$ID_CHAT" \
         -F "disable_web_page_preview=true" \
         -F "parse_mode=html" \
-        -F caption="Build Done!." 
+        -F caption="Build Done!." >/dev/null 2>&1
 }
 
 push 
