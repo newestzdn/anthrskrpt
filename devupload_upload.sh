@@ -1,7 +1,7 @@
 #!bin/bash
 
 for file in *.zip;
-do curl -s https://devuploads.com/upload.sh -f "$file" -k $DEVUPLOAD_TOKEN >> anu1.txt
+do bash <(curl -s https://devuploads.com/upload.sh) -f "$file" -k $DEVUPLOAD_TOKEN >> anu1.txt
 
 function push() {
 LINKROM=$(echo *.txt)
