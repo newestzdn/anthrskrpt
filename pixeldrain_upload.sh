@@ -1,7 +1,7 @@
 #!bin/bash
 
 for file in *.zip;
-do curl -s -T "$file" https://pixeldrain.com/api/file/; done >> anu1.txt
+do curl -T "$file" -u "$pixeltoken" https://pixeldrain.com/api/file/; done >> anu1.txt
 
 function push() {
 LINKROM=$(echo *.txt)
